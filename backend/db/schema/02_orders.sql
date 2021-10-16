@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS orders CASCADE;
+CREATE TABLE orders(
+  id SERIAL PRIMARY KEY NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  cost DECIMAL NOT NULL,
+  revenue DECIMAL NOT NULL,
+  order_time TIMESTAMP
+);

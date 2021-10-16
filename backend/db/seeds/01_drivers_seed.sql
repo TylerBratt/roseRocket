@@ -1,0 +1,6 @@
+INSERT INTO drivers(first_name, last_name, license, insurance, availability)
+VALUES ('Steve', 'Williams', '3s4d5f6g7gf', 'c4d65f7g8h', true)
+INSERT INTO drivers(first_name, last_name, license, insurance)
+VALUES ('Chris', 'Horton', 'edr6ftygu3', 'rtf8yb7gd3', true)
+INSERT INTO drivers(first_name, last_name, license, insurance)
+VALUES ('Alex', 'Novak', 's4d65f7yguhij', '5rd6tfv7byg', true)
