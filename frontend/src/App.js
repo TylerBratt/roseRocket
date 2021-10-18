@@ -1,11 +1,22 @@
-import Drivers from './components/Drivers';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const [data, setData] = React.useState(null);
+
+  React.useEffect(() => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => setData(data.message));
+  }, []);
+
   return (
     <div className="App">
-      <h1>Yo</h1>
-      <Drivers />
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>{!data ? "Loading..." : data}</p>
+      </header>
     </div>
   );
 }

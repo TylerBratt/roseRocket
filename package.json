@@ -1,0 +1,25 @@
+{
+  "name": "rose",
+  "version": "1.0.0",
+  "description": "``` dependancies ``` node.js postgreSQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js",
+    "build": "cd frontend && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TylerBratt/roseRocket.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TylerBratt/roseRocket/issues"
+  },
+  "homepage": "https://github.com/TylerBratt/roseRocket#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

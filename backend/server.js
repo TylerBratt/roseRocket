@@ -1,25 +1,18 @@
-const http = require('http');
-const fs = require('fs');
-const port = 3000;
+const express = require('express');
+const PORT = process.env.PORT || 3001;
+const app = express();
 
-const server = http.createServer(function(req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  fs.readFile('../frontend/App.js', function(error, data) {
-    if (error) {
-      res.writeHead(404);
-      res.write('Error: File not Found');
-    } else {
-      res.write(data)
-    }
-    res.end()
-  });
+app.use(express.static(path.resolve(__dirname, '../frontend/build')));
+
+app.get("/api", (req, res) => {
+  res.json({ message: "Hello from server!" });
 });
 
-server.listen(port, function(error) {
-  if (error) {
-    console.log('something went wrong', error)
-  } else {
-    console.log('server is listening on port ' + port)
-  };
+app.get('*', (req, res)=> {
+  res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server listening on ${PORT}`);
 });
 

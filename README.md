@@ -1,10 +1,11 @@
-``` dependancies ```
-node.js
-postgreSQL
+dependencies
+`` node.js ``
+`` express ``
+`` postgreSQL ``
 
 
 start server on command line by typing
-`` node server.js ``
+`` npm start ``
 
 install and start database on command line
 `` brew install postgres ``
