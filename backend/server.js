@@ -1,22 +1,14 @@
-const path = require('path');
-const express = require("express");
-
+const express = require('express');
+const fs = require('fs')
 const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, '../frontend/build')));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Handle GET requests to /api route
-app.get("/api", (req, res) => {
-  res.json({ message: "Hello from server!" });
-});
+const routes = require('./routes/routes.js')(app, fs);
 
-// All other GET requests not handled before will return our React app
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../frontend/build', 'app.js'));
-});
-
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
+const server = app.listen(PORT, () => {
+  console.log(`listening on ${PORT}`, server.address().port);
 });
