@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, '../frontend/src')));
+app.use(express.static(path.resolve(__dirname, '../frontend/build')));
 
 // Handle GET requests to /api route
 app.get("/api", (req, res) => {
