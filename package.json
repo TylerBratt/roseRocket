@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "``` dependancies ``` node.js postgreSQL",
   "main": "index.js",
+  "engines": {
+    "node": "15.11.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
