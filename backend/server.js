@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.use(express.static(path.resolve(__dirname, '../frontend/src')));
 
 // Handle GET requests to /api route
 app.get("/api", (req, res) => {
@@ -14,7 +14,7 @@ app.get("/api", (req, res) => {
 
 // All other GET requests not handled before will return our React app
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/build', 'src/app.js'));
+  res.sendFile(path.resolve(__dirname, '../frontend/build', 'app.js'));
 });
 
 app.listen(PORT, () => {
