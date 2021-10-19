@@ -1,0 +1,43 @@
+
+  .dispatch h1 {
+    margin: 20px;
+    font-size: 60px;
+  }
+  
+  .allDeliveries {
+    width: 100vw;
+    height: 500px;
+    margin: 10px;
+    border-radius: 5px;
+    overflow-x: scroll;
+    display: flex;
+  }
+
+  .singleDelivery {
+    display: flex;
+    align-items: center;
+    min-width: calc(100vw - 10px);
+    height: 50px;
+    background:lemonchiffon;
+
+  }
+
+  .singleDelivery .orderId, .driverName, .orderDescription, .departure, .arrival {
+    width:auto;
+    padding: 10px;
+    margin-right: 10px;
+    background: lightpink;
+    border-radius: 10px;
+  }
+
+
+  .driverName {
+    width: 20%;
+  }
+  .orderDescription {
+    width: 50%;
+  }
+
+  button {
+    margin: 5px;
+  }

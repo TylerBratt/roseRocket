@@ -1,0 +1,43 @@
+html,body, h1, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3em;
+  width: 100vw;
+  background-color: lightgray;
+}
+.logo {
+  margin-left: 15px;
+}
+
+.links {
+  height:inherit;
+}
+
+.links ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+  width: 100%;
+  height: inherit;
+  list-style-type: none;
+}
+
+.links ul li a{
+  text-decoration: none;
+  color: black;
+  padding: 12px 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.links a:hover {
+  background: darkgrey;
+  height: 3em;
+}

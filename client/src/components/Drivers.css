@@ -1,0 +1,43 @@
+.drivers h1 {
+  margin: 20px;
+  font-size: 60px;
+}
+
+.allDrivers {
+  width: 100vw;
+  height: 500px;
+  margin: 10px;
+  border-radius: 5px;
+  overflow-x: scroll;
+  display: flex;
+  justify-content: center;
+}
+
+.onDelivery, .onCall, .unavailable {
+  width: 33%;
+  background-color: rgb(198, 220, 228);
+  border-radius: 10px;
+  margin: 10px;
+  overflow: scroll;
+  box-shadow: 5px 5px 15px rgb(117, 122, 124) inset;
+}
+
+.onDelivery, .onCall, .unavailable h2 {
+  text-align: center;
+}
+
+.card {
+  height: 50px;
+  min-width:80%;
+  background-color: rgb(126, 202, 228);
+  margin: 10px;
+  border-radius: 5px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.card .driverId {
+  padding-right: 25px;
+}
+
