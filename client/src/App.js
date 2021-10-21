@@ -13,19 +13,19 @@ import {
 import "./App.css";
 
 function App() {
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
 
-  useEffect(() => {
-    fetch("/")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
+  // useEffect(() => {
+  //   fetch("/")
+  //     .then((res) => res.json())
+  //     .then((data) => setData(data.message));
+  // }, []);
+  // console.log('HERERE', data)
 
   return (
     <Router>
       <div className="App">
         <Navigation />
-        
         <Switch>
           <Route exact path='/'>
             <Home />

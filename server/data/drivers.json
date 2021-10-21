@@ -1,14 +1,23 @@
 {
-  "1": {
-    "name": "Steve Williams",
-    "insurance": "xr6ct7vy8bu9n"
-  },
-  "2": {
-    "name": "Chris Horton",
-    "insurance": "sdcft7v8gyb3"
-  },
-  "3": {
-    "name": "Alex Novak",
-    "insurance": "d6vf7b68gn79h"
-  }
+  "drivers": [
+    {
+      "id": 1,
+      "name": "Steve Williams",
+      "insurance": "xr6ct7vy8bu9n",
+      "licence": "d5r6ft7gy8"
+    },
+    {
+      "id": 2,
+      "name": "Chris Horton",
+      "insurance": "sdcft7v8gyb3",
+      "licence": "7fg8hbiu"
+    },
+    {
+      "id": 3,
+      "name": "Alex Novak",
+      "insurance": "d6vf7b68gn79h",
+      "licence": "ftgy89bun"
+    }
+  ]
+  
 }
