@@ -25,7 +25,7 @@
   text-align: center;
 }
 
-.card {
+#card {
   height: 50px;
   min-width:80%;
   background-color: rgb(126, 202, 228);
