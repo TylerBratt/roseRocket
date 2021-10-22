@@ -17,8 +17,9 @@ app.use(function(req, res, next) {
   });
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/public", "index.html"))
+  res.sendFile(path.join(__dirname, "build", "index.html"))
 });
+console.log("HERE",__dirname)
 
 
 app.use("/deliveries", deliveriesRoute);
