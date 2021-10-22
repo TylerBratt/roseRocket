@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
   });
 
 app.get('/', (req, res) => {
-  res.send('Hello!')
+  res.sendFile(path.join(__dirname, "public", "index.html"))
 });
 
 
