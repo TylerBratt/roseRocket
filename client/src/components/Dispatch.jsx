@@ -10,7 +10,7 @@ export default function Dispatch() {
 
 
   useEffect( () => {
-    const driversList = `http://localhost:3001/drivers/`
+    const driversList = `/drivers/`
     axios.get(driversList)
       .then(response => {
         setDrivers(response.data.drivers);
@@ -18,7 +18,7 @@ export default function Dispatch() {
     },[]);
 
   useEffect( () => {
-    const deliveriesList = `http://localhost:3001/deliveries/`
+    const deliveriesList = `/deliveries/`
     axios.get(deliveriesList)
       .then(response => {
         setDelivery(response.data.deliveries);
