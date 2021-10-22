@@ -7,7 +7,7 @@ const deliveriesRoute = require('./routes/deliveries');
 const driversRoute = require('./routes/drivers');
 
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(function(req, res, next) {
