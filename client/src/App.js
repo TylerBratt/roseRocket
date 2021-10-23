@@ -30,13 +30,13 @@ function App() {
           <Route exact path='/'>
             <Home />
           </Route>
-          <Route path='/Dispatch'>
+          <Route path='/'>
             <Dispatch />
           </Route>
-          <Route path='/Drivers'>
+          <Route path='/'>
             <Drivers />
           </Route>
-          <Route path='/Orders'>
+          <Route path='/'>
             <Orders />
           </Route>
         </Switch>

@@ -1,13 +1,20 @@
 dependencies
+`` react ``
 `` node.js ``
 `` express ``
-`` postgreSQL ``
+
+run
+
+`` npm install ``
 
 
-start server on command line by typing
-`` npm start ``
+will start server and react app on command line with
+`` npm run dev ``
 
-install and start database on command line
-`` brew install postgres ``
-`` brew services start postgresql ``
+deployed on Heroku at:
+
+[Heroku](https://rose-rocket.herokuapp.com/)
+
+
+originally used postgreSQL, but changed to simple JSON files
 

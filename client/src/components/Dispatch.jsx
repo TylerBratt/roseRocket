@@ -26,6 +26,8 @@ export default function Dispatch() {
     },[]);
 
     //Attempt to create drag and drop functionality
+    //can drag and drop, but only in the order of the original array
+
 
     const onDragStart = (event, id) => {
       event.dataTransfer.setData('text/plain', event.target.id)
