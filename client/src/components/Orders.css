@@ -1,46 +1,32 @@
+.orders h1 {
+  font-size: 60px;
+  margin: 20px;
+}
+
 .allOrders {
-  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   height: 500px;
+  min-width: 475px;
+  max-width: 80vw;
+  padding: 15px;
+  border: 2px solid black;
+  overflow: scroll;
   margin: 20px auto;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  background-color: lightgray;
-  overflow-y: scroll;
 }
 
-thead {
-  margin: 10px 0;
-  border-bottom: 2px solid black;
-}
-
-tbody > tr {
-  width: 100%;
-}
-
-.ordersTable {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.orderCard {
-  display: flex;
-}
-
-.orderId {
-  width: 10%;
-  padding-left: 10px;
+.ordersHead {
+  height: 50px;
   text-align: left;
 }
-
-.orderDesc {
-  width: 60%;
-  text-align: left;
+/* .startDate {
+  width: 100px;
 }
 
-.orderRev, .orderCost {
-  width: 10%;
-  text-align: left;
-}
+.inputs {
+  display: flex;
+} */
+
+
 

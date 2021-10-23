@@ -31,7 +31,6 @@ export default function Dispatch() {
       event.dataTransfer.setData('text/plain', event.target.id)
       let data = event.dataTransfer.getData('Text');
       console.log('this is also data',data)
-      // event.target.style.backgroundColor="lightgrey"
     };
 
     const onDragOver = (event) => {
@@ -41,11 +40,28 @@ export default function Dispatch() {
     const onDrop = (event) => {
       event.preventDefault();
       if (event.target.id === "driverContainer") {
+        document.getElementById('dispatchModify').style.display='none';
         let data = event.dataTransfer.getData('Text')
         event.target.appendChild(document.getElementById(data));
-
       }
     };
+
+    //allow user to edit cost/revenue
+
+    // const editPrice = () => {
+    //   let editElem = document.getElementById('dispatchRev');
+    //   let userVersion = editElem.innerHTML;
+    //   localStorage.userEdits = userVersion;
+    // }
+
+    const removeDelivery = (event) => {
+      document.addEventListener('click', () => {
+        let elem = document.getElementById("dispatchOrder");
+        elem.parentNode.removeChild(elem);
+        event.stopPropagation()
+      }, {once: true});
+    };
+
 
     const singleOrder = delivery.map(({id, description, revenue, cost }) => (
 
@@ -57,18 +73,20 @@ export default function Dispatch() {
         >
           <div className="dispatchId">{id}</div>
           <div className="dispatchDesc">{description}</div>
-          <div 
+          <div
             id="dispatchRev" 
-            // contentEditable="false"
+            // contentEditable="true"
             >{revenue}</div>
           <div 
             id="dispatchCost" 
             // contentEditable="false"
             >{cost}</div>
-            <button id="dispatchModify" disabled>modify</button>
-            <button id="dipatchDelete" disabled>delete</button>
+            <button id="dispatchModify">modify</button>
+            <button 
+              id="dispatchDelete"
+              onClick={(e)=>removeDelivery(e)}
+              >delete</button>
       </div>
-
     ));
 
 
@@ -96,9 +114,7 @@ export default function Dispatch() {
               <th>Revenue</th>
               <th>Cost</th>
             </thead>
-
               {singleOrder}
-
           </div>
             <div className="allDriversContainer">
               {singleDriver}

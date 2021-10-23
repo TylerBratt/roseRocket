@@ -4,9 +4,9 @@
 }
 
 .allDrivers {
-  width: 100vw;
+  width: 96vw;
   height: 500px;
-  margin: 10px;
+  margin: 30px;
   border-radius: 5px;
   display: flex;
   justify-content: center;

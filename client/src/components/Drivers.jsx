@@ -6,7 +6,7 @@ export default function Drivers() {
   const [drivers, setDrivers] = useState([]);
 
   useEffect( () => {
-    const driversList = `http://localhost:3001/drivers/`
+    const driversList = `/drivers/`
     axios.get(driversList)
       .then(response => {
         setDrivers(response.data.drivers);
