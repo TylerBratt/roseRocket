@@ -8,7 +8,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  HashRouter
 } from 'react-router-dom'
 import "./App.css";
 
@@ -23,7 +23,7 @@ function App() {
   // console.log('HERERE', data)
 
   return (
-    <Router>
+    <Router history ={HashRouter}>
       <div className="App">
         <Navigation />
         <Switch>
